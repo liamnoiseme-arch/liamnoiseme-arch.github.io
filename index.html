@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Татьяна Егомостева | Тестировщик ПО</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Подключаем шрифты с Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Главная секция с именем и профессией -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Татьяна Егомостева</h1>
+                <h2>Ручной тестировщик ПО</h2>
+                <div class="contact-buttons">
+                    <a href="#contact" class="btn">Связаться со мной</a>
+                    <a href="resume.pdf" class="btn secondary" target="_blank">Скачать резюме (PDF)</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Заменить на свою фотографию -->
+                <img src="C:\Users\Пользователь\Desktop\домашка qa\maincaracter\Avatar.jpg.jpg" alt="Фото Анны Петровой">
+            </div>
+        </div>
+    </header>
+
+    <!-- Секция "Обо мне" -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Обо мне</h2>
+            <div class="about-content">
+                <p>Я — начинающий ручной тестировщик с фокусом на обеспечение качества веб- и мобильных приложений. Имею опыт работы в agile-командах и страсть к деталям. Верю, что хорошее тестирование — это не просто поиск ошибок, а вклад в создание удобного и надежного продукта для пользователя.</p>
+                <p>Постоянно учусь новым инструментам и методологиям. В свободное время читаю технические блоги и практикуюсь в написании тест-кейсов и чек-листов для популярных приложений.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "Мой стек" -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Мой стек</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Тестирование</h3>
+                    <ul>
+                        <li>Функциональное тестирование</li>
+                        <li>Регрессионное тестирование</li>
+                        <li>Тестирование UI/UX</li>
+                        <li>Кросс-браузерное тестирование</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Инструменты</h3>
+                    <ul>
+                        <li>Jira, TestRail</li>
+                        <li>Postman, SoapUI</li>
+                        <li>Chrome DevTools</li>
+                        <li>MySQL (базовые запросы)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-mobile-alt"></i> Платформы</h3>
+                    <ul>
+                        <li>Веб-приложения</li>
+                        <li>Мобильные приложения (Android/iOS)</li>
+                        <li>Десктоп (Windows)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-book"></i> Документация</h3>
+                    <ul>
+                        <li>Тест-кейсы и чек-листы</li>
+                        <li>Багрепорты</li>
+                        <li>Тест-планы</li>
+                        <li>Ментальные карты (Mind Maps)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "Контакты" -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <a href="mailto:miron.maximoff@yandex.ru">miron.maximoff@yandex.ru</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-telegram"></i>
+                    <div>
+                        <h3>Telegram</h3>
+                        <a href="https://t.me/Liamnoise" target="_blank">@Liamnoise</a>
+                     </div>   
+                    </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Локация</h3>
+                        <p>Санкт-Петербург, Россия</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Татьяна Егомостева. Все права защищены.</p>
+            <p class="footer-note">Сайт-визитка создана на чистом HTML и CSS</p>
+        </div>
+    </footer>
+
+    <!-- Простой скрипт для отображения текущего года -->
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

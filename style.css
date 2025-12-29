@@ -1,0 +1,317 @@
+/* Сброс стилей и базовые настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #4a6fa5; /* Основной синий */
+    --secondary-color: #166088; /* Темно-синий */
+    --accent-color: #ff7e5f; /* Оранжевый акцент */
+    --light-color: #f8f9fa;
+    --dark-color: #333;
+    --gray-color: #6c757d;
+    --border-radius: 12px;
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Секция "Герой" (шапка) */
+.hero {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.hero h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: var(--gray-color);
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: var(--transition);
+    border: 2px solid var(--primary-color);
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow);
+}
+
+.btn.secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn.secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+    border: 8px solid white;
+}
+
+/* Общие стили для секций */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Секция "Обо мне" */
+.about {
+    background-color: var(--light-color);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+/* Секция "Мой стек" */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.skill-category {
+    background: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.skill-category:hover {
+    transform: translateY(-10px);
+}
+
+.skill-category h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-category h3 i {
+    color: var(--accent-color);
+}
+
+.skill-category ul {
+    list-style-type: none;
+}
+
+.skill-category li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 20px;
+}
+
+.skill-category li:last-child {
+    border-bottom: none;
+}
+
+.skill-category li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Секция "Контакты" */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: white;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+
+.contact-item i {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    min-width: 40px;
+}
+
+.contact-item h3 {
+    color: var(--gray-color);
+    font-size: 1rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-item a, .contact-item p {
+    color: var(--dark-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.contact-item a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Подвал */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.footer-note {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-buttons {
+        justify-content: center;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
